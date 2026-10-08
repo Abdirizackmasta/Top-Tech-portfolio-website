@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopTech Computer College - Empowering Minds Through Technology</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        toptech: {
+                            navy: '#0b2853',
+                            blue: '#134074',
+                            accent: '#10B981',
+                            green: '#00A86B',
+                            lightBg: '#F8FAFC',
+                            darkText: '#0F172A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-pattern {
+            background-color: #0b2853;
+            background-image: radial-gradient(#10B981 0.75px, transparent 0.75px), radial-gradient(#10B981 0.75px, #0b2853 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0,15px 15px;
+            opacity: 0.98;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-toptech-navy text-slate-200 text-xs sm:text-sm py-2 px-4 border-b border-blue-900/50">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4 flex-wrap justify-center sm:justify-start">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-emerald-400"></i> Garissa, Kenya (Bulla Mzuri)</span>
+                <span class="hidden md:inline text-slate-500">|</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-clock text-emerald-400"></i> Mon - Sat: 8:00 AM - 6:00 PM</span>
+            </div>
+            <div class="flex items-center gap-4 text-xs">
+                <a href="tel:0798090975" class="hover:text-emerald-400 transition-colors flex items-center gap-1"><i class="fa-solid fa-phone"></i> 0798090975</a>
+                <a href="tel:0118634000" class="hover:text-emerald-400 transition-colors flex items-center gap-1"><i class="fa-solid fa-phone"></i> 0118634000</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN STICKY NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- LOGO WITH BRAND ICON -->
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 relative flex-shrink-0">
+                        <!-- Official Badge SVG Rendered -->
+                        <svg viewBox="0 0 200 200" class="w-full h-full drop-shadow">
+                            <circle cx="100" cy="100" r="96" fill="none" stroke="#0b2853" stroke-width="6"/>
+                            <circle cx="100" cy="100" r="88" fill="none" stroke="#00A86B" stroke-width="3"/>
+                            <!-- Inner Circuit Lines -->
+                            <circle cx="100" cy="100" r="72" fill="white" stroke="#0b2853" stroke-width="2"/>
+                            <!-- Microchip Icon Base -->
+                            <rect x="75" y="75" width="50" height="50" rx="8" fill="#134074"/>
+                            <rect x="85" y="85" width="30" height="30" rx="4" fill="#00A86B"/>
+                            <!-- Graduation Cap -->
+                            <polygon points="100,50 140,65 100,80 60,65" fill="#0b2853"/>
+                            <polygon points="75,71 75,85 100,95 125,85 125,71" fill="#0b2853"/>
+                            <path d="M135 67 L 135 88" stroke="#00A86B" stroke-width="3"/>
+                            <!-- Green Rising Arrow -->
+                            <path d="M70 145 Q 110 110 150 50 L 130 55 M 150 50 L 145 70" fill="none" stroke="#00A86B" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                            <!-- Navy Arrow -->
+                            <path d="M50 135 Q 90 110 120 75" fill="none" stroke="#0b2853" stroke-width="6" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-extrabold text-lg sm:text-xl text-toptech-navy tracking-tight leading-tight group-hover:text-toptech-green transition-colors">TOPTECH</span>
+                        <span class="text-xs font-semibold text-emerald-600 tracking-wider">COMPUTER COLLEGE</span>
+                    </div>
+                </a>
+
+                <!-- DESKTOP NAV LINKS -->
+                <nav class="hidden lg:flex items-center gap-8 font-medium text-slate-700 text-sm">
+                    <a href="#home" class="hover:text-toptech-green transition-colors py-1 border-b-2 border-transparent hover:border-toptech-green">Home</a>
+                    <a href="#about" class="hover:text-toptech-green transition-colors py-1 border-b-2 border-transparent hover:border-toptech-green">About Us</a>
+                    <a href="#courses" class="hover:text-toptech-green transition-colors py-1 border-b-2 border-transparent hover:border-toptech-green">Courses & Programs</a>
+                    <a href="#schedule" class="hover:text-toptech-green transition-colors py-1 border-b-2 border-transparent hover:border-toptech-green">Class Schedule</a>
+                    <a href="#contact" class="hover:text-toptech-green transition-colors py-1 border-b-2 border-transparent hover:border-toptech-green">Contact Us</a>
+                </nav>
+
+                <!-- CTA BUTTON -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <button onclick="openApplyModal('General Course Inquiry')" class="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm px-5 py-2.5 rounded-xl shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Apply Now
+                    </button>
+                </div>
+
+                <!-- MOBILE MENU BUTTON -->
+                <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-slate-700 hover:bg-slate-100 focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE MENU DROPDOWN -->
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-slate-100 bg-white px-4 pt-3 pb-6 space-y-3 shadow-xl">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-toptech-green">Home</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-toptech-green">About Us</a>
+            <a href="#courses" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-toptech-green">Courses & Programs</a>
+            <a href="#schedule" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-toptech-green">Class Schedule</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium hover:text-toptech-green">Contact Us</a>
+            <button onclick="toggleMobileMenu(); openApplyModal('General Course Inquiry')" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 rounded-xl shadow mt-2 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-paper-plane"></i> Apply / Register Now
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative hero-pattern text-white py-16 lg:py-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-400/40 px-4 py-1.5 rounded-full text-emerald-300 text-sm font-medium backdrop-blur-sm">
+                        <i class="fa-solid fa-graduation-cap"></i> Premier IT Training Institute in Garissa
+                    </div>
+                    
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        TOPTECH <span class="text-emerald-400">COMPUTER</span> COLLEGE
+                    </h1>
+                    
+                    <p class="text-xl sm:text-2xl text-emerald-300 font-medium italic tracking-wide">
+                        "Empowering minds through technology"
+                    </p>
+                    
+                    <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Master in-demand digital skills and elevate your career. From computer packages, web development, software engineering to dispatch tracking, IT support, and graphic design—we offer flexible Monday to Saturday classes in Garissa, Bulla Mzuri.
+                    </p>
+
+                    <!-- Hero Call to Action Buttons -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#courses" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-toptech-navy font-bold px-8 py-4 rounded-xl shadow-lg transition-all text-center flex items-center justify-center gap-2 transform hover:-translate-y-0.5">
+                            <i class="fa-solid fa-book-open"></i> Explore Courses
+                        </a>
+                        <button onclick="openApplyModal('General Registration')" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl border border-white/20 backdrop-blur-sm transition-all text-center flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-user-plus"></i> Register Online
+                        </button>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="grid grid-cols-3 gap-4 pt-8 border-t border-slate-700/60 max-w-lg mx-auto lg:mx-0">
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-white">8+</div>
+                            <div class="text-xs sm:text-sm text-slate-300">Specialized Courses</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400">6 Days</div>
+                            <div class="text-xs sm:text-sm text-slate-300">Mon - Sat Training</div>
+                        </div>
+                        <div>
+                            <div class="text-2xl sm:text-3xl font-extrabold text-white">100%</div>
+                            <div class="text-xs sm:text-sm text-slate-300">Practical Hands-on</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Visual: College Official Badge Badge Display -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
+                        <!-- Glow effect -->
+                        <div class="absolute -inset-4 bg-emerald-500/20 rounded-full blur-2xl animate-pulse"></div>
+                        
+                        <!-- Emblem Badge Container -->
+                        <div class="relative w-full h-full bg-white p-6 rounded-full shadow-2xl border-4 border-emerald-400/50 flex items-center justify-center">
+                            <!-- High Precision SVG Badge Copy matching Official Logo -->
+                            <svg viewBox="0 0 200 200" class="w-full h-full">
+                                <!-- Outer Dark Blue Ring -->
+                                <circle cx="100" cy="100" r="95" fill="none" stroke="#0b2853" stroke-width="8"/>
+                                <circle cx="100" cy="100" r="88" fill="none" stroke="#00A86B" stroke-width="3"/>
+                                
+                                <!-- Curved Text Top: TOPTECH COMPUTER COLLEGE -->
+                                <path id="textPathTop" d="M 25 100 A 75 75 0 0 1 175 100" fill="none" stroke="transparent"/>
+                                <text font-size="13" font-weight="900" fill="#0b2853" letter-spacing="1">
+                                    <textPath href="#textPathTop" startOffset="50%" text-anchor="middle">
+                                        TOPTECH
+                                    </textPath>
+                                </text>
+                                
+                                <path id="textPathTopSub" d="M 38 100 A 62 62 0 0 1 162 100" fill="none" stroke="transparent"/>
+                                <text font-size="9" font-weight="800" fill="#00A86B" letter-spacing="0.5">
+                                    <textPath href="#textPathTopSub" startOffset="50%" text-anchor="middle">
+                                        COMPUTER COLLEGE
+                                    </textPath>
+                                </text>
+
+                                <!-- Curved Ribbon Bottom: EMPOWERING MINDS THROUGH TECHNOLOGY -->
+                                <path id="textPathBottom" d="M 25 100 A 75 75 0 0 0 175 100" fill="none" stroke="transparent"/>
+                                <text font-size="7.5" font-weight="800" fill="#0b2853" letter-spacing="0.5">
+                                    <textPath href="#textPathBottom" startOffset="50%" text-anchor="middle">
+                                        EMPOWERING MINDS THROUGH TECHNOLOGY
+                                    </textPath>
+                                </text>
+
+                                <!-- Circuit & Microchip Graphics -->
+                                <circle cx="100" cy="100" r="54" fill="#F8FAFC" stroke="#0b2853" stroke-width="1.5"/>
+                                
+                                <!-- Chip Base -->
+                                <rect x="78" y="78" width="44" height="44" rx="6" fill="#134074"/>
+                                <rect x="86" y="86" width="28" height="28" rx="3" fill="#00A86B"/>
+                                <circle cx="100" cy="100" r="8" fill="#ffffff"/>
+
+                                <!-- Graduation Cap -->
+                                <polygon points="100,52 135,66 100,80 65,66" fill="#0b2853"/>
+                                <polygon points="78,71 78,83 100,92 122,83 122,71" fill="#0b2853"/>
+                                <path d="M128 68 L 128 86" stroke="#00A86B" stroke-width="2.5"/>
+
+                                <!-- Rising Success Arrows -->
+                                <path d="M60 142 Q 100 110 148 55 L 128 60 M 148 55 L 142 75" fill="none" stroke="#00A86B" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M48 132 Q 85 110 118 78" fill="none" stroke="#0b2853" stroke-width="5" stroke-linecap="round"/>
+
+                                <!-- Side Stars -->
+                                <polygon points="25,95 27,100 32,100 28,103 30,108 25,105 20,108 22,103 18,100 23,100" fill="#0b2853"/>
+                                <polygon points="175,95 177,100 182,100 178,103 180,108 175,105 170,108 172,103 168,100 173,100" fill="#0b2853"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT & WHY CHOOSE US -->
+    <section id="about" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-600 mb-2">Welcome To TopTech</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-toptech-navy">Empowering Garissa with Modern Tech Skills</p>
+                <p class="text-slate-600 mt-4 text-base">TopTech Computer College in Garissa (Bulla Mzuri) is dedicated to delivering high-quality, practical computer and technical education. Whether starting from scratch or looking to advance your career, we provide certified, industry-standard training tailored for students, job seekers, and working professionals.</p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-toptech-navy mb-2">100% Practical Learning</h3>
+                    <p class="text-slate-600 text-sm">Every student gets dedicated computer lab access with hands-on real-world projects.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-blue-100 text-toptech-navy rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-toptech-navy mb-2">Flexible Class Schedules</h3>
+                    <p class="text-slate-600 text-sm">Classes run Monday to Saturday with flexible Morning, Afternoon, and Evening batches.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-toptech-navy mb-2">Expert Instructors</h3>
+                    <p class="text-slate-600 text-sm">Learn directly from experienced tech professionals passionate about student growth.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-12 h-12 bg-blue-100 text-toptech-navy rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-toptech-navy mb-2">Recognized Certification</h3>
+                    <p class="text-slate-600 text-sm">Gain valuable certificates upon successful completion to boost your job applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COURSES OFFERED SECTION -->
+    <section id="courses" class="py-16 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-10">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-600 mb-2">Our Academic Programs</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-toptech-navy">Explore Our Specialized Courses</p>
+                <p class="text-slate-600 mt-3 text-base">Select a course to view details or register online today.</p>
+                
+                <!-- FILTER BUTTONS -->
+                <div class="flex flex-wrap justify-center gap-2 mt-6">
+                    <button onclick="filterCourses('all')" class="course-filter-btn active bg-toptech-navy text-white px-4 py-2 rounded-xl text-sm font-semibold shadow transition-all" data-filter="all">All Courses</button>
+                    <button onclick="filterCourses('tech')" class="course-filter-btn bg-white text-slate-700 hover:bg-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition-all" data-filter="tech">Software & Tech</button>
+                    <button onclick="filterCourses('office')" class="course-filter-btn bg-white text-slate-700 hover:bg-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition-all" data-filter="office">Office & Typing</button>
+                    <button onclick="filterCourses('specialized')" class="course-filter-btn bg-white text-slate-700 hover:bg-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition-all" data-filter="specialized">Logistics & Languages</button>
+                </div>
+            </div>
+
+            <!-- COURSES GRID -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" id="coursesGrid">
+
+                <!-- 1. Computer Packages -->
+                <div class="course-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 flex flex-col" data-category="office">
+                    <div class="bg-gradient-to-r from-toptech-navy to-toptech-blue p-5 text-white flex justify-between items-center">
+                        <i class="fa-solid fa-desktop text-3xl text-emerald-400"></i>
+                        <span class="text-xs bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 px-2.5 py-1 rounded-full font-medium">Foundation</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-toptech-navy mb-2">Computer Packages</h3>
+                            <p class="text-slate-600 text-sm mb-4">Master essential computer skills: MS Word, Excel, PowerPoint, Access, Publisher, and Internet Fundamentals.</p>
+                            <div class="space-y-1.5 text-xs text-slate-500 mb-6">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-clock text-emerald-600"></i> Duration: 1 - 2 Months</div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-user-graduate text-emerald-600"></i> Level: Beginners to Intermediate</div>
+                            </div>
+                        </div>
+                        <button onclick="openApplyModal('Computer Packages')" class="w-full bg-slate-100 hover:bg-emerald-600 hover:text-white text-toptech-navy font-semibold py-2.5 rounded-xl transition-colors text-sm flex items-center justify-center gap-2">
+                            Enroll in Course <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 4. Graphic Design -->
+                <div class="course-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 flex flex-col" data-category="tech">
+                    <div class="bg-gradient-to-r from-toptech-navy to-toptech-blue p-5 text-white flex justify-between items-center">
+                        <i class="fa-solid fa-palette text-3xl text-emerald-400"></i>
+                        <span class="text-xs bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 px-2.5 py-1 rounded-full font-medium">Creative</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-toptech-navy mb-2">Graphic Design</h3>
+                            <p class="text-slate-600 text-sm mb-4">Master branding, photo editing, poster creation, and vector illustrations using Photoshop, Illustrator & Canva.</p>
+                            <div class="space-y-1.5 text-xs text-slate-500 mb-6">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-clock text-emerald-600"></i> Duration: 2 Months</div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-pen-nib text-emerald-600"></i> Portfolio Creation</div>
+                            </div>
+                        </div>
+                        <button onclick="openApplyModal('Graphic Design')" class="w-full bg-slate-100 hover:bg-emerald-600 hover:text-white text-toptech-navy font-semibold py-2.5 rounded-xl transition-colors text-sm flex items-center justify-center gap-2">
+                            Enroll in Course <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 5. IT Support & Networking -->
+                <div class="course-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 flex flex-col" data-category="tech">
+                    <div class="bg-gradient-to-r from-toptech-navy to-toptech-blue p-5 text-white flex justify-between items-center">
+                        <i class="fa-solid fa-headset text-3xl text-emerald-400"></i>
+                        <span class="text-xs bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 px-2.5 py-1 rounded-full font-medium">Practical</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-toptech-navy mb-2">IT Support & Hardware</h3>
+                            <p class="text-slate-600 text-sm mb-4">Computer maintenance, hardware troubleshooting, OS installation, virus protection, and basic networking.</p>
+                            <div class="space-y-1.5 text-xs text-slate-500 mb-6">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-clock text-emerald-600"></i> Duration: 2 Months</div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-wrench text-emerald-600"></i> Hardware Lab Workshops</div>
+                            </div>
+                        </div>
+                        <button onclick="openApplyModal('IT Support')" class="w-full bg-slate-100 hover:bg-emerald-600 hover:text-white text-toptech-navy font-semibold py-2.5 rounded-xl transition-colors text-sm flex items-center justify-center gap-2">
+                            Enroll in Course <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 6. Track Dispatch -->
+                <div class="course-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 flex flex-col" data-category="specialized">
+                    <div class="bg-gradient-to-r from-toptech-navy to-toptech-blue p-5 text-white flex justify-between items-center">
+                        <i class="fa-solid fa-truck-fast text-3xl text-emerald-400"></i>
+                        <span class="text-xs bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 px-2.5 py-1 rounded-full font-medium">Logistics</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-toptech-navy mb-2">Track Dispatch</h3>
+                            <p class="text-slate-600 text-sm mb-4">Specialized dispatch training, logistics software management, route navigation, and freight coordination.</p>
+                            <div class="space-y-1.5 text-xs text-slate-500 mb-6">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-clock text-emerald-600"></i> Duration: 1 - 2 Months</div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-globe text-emerald-600"></i> International Logistics Skills</div>
+                            </div>
+                        </div>
+                        <button onclick="openApplyModal('Track Dispatch')" class="w-full bg-slate-100 hover:bg-emerald-600 hover:text-white text-toptech-navy font-semibold py-2.5 rounded-xl transition-colors text-sm flex items-center justify-center gap-2">
+                            Enroll in Course <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 7. Interpretation Services / Lessons -->
+                <div class="course-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 flex flex-col" data-category="specialized">
+                    <div class="bg-gradient-to-r from-toptech-navy to-toptech-blue p-5 text-white flex justify-between items-center">
+                        <i class="fa-solid fa-language text-3xl text-emerald-400"></i>
+                        <span class="text-xs bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 px-2.5 py-1 rounded-full font-medium">Professional</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-toptech-navy mb-2">Interpretation Lessons</h3>
+                            <p class="text-slate-600 text-sm mb-4">Professional language interpretation, translation techniques, cross-cultural communication, and field ethics.</p>
+                            <div class="space-y-1.5 text-xs text-slate-500 mb-6">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-clock text-emerald-600"></i> Duration: Flexible</div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-comments text-emerald-600"></i> Practical Oral Sessions</div>
+                            </div>
+                        </div>
+                        <button onclick="openApplyModal('Interpretation')" class="w-full bg-slate-100 hover:bg-emerald-600 hover:text-white text-toptech-navy font-semibold py-2.5 rounded-xl transition-colors text-sm flex items-center justify-center gap-2">
+                            Enroll in Course <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 8. Arabic Typing -->
+                <div class="course-card bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden border border-slate-200 flex flex-col" data-category="office">
+                    <div class="bg-gradient-to-r from-toptech-navy to-toptech-blue p-5 text-white flex justify-between items-center">
+                        <i class="fa-solid fa-keyboard text-3xl text-emerald-400"></i>
+                        <span class="text-xs bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 px-2.5 py-1 rounded-full font-medium">Specialized</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-xl font-bold text-toptech-navy mb-2">Arabic Typing</h3>
+                            <p class="text-slate-600 text-sm mb-4">Learn Arabic keyboard touch typing speed, accuracy, formatting documents, and official letter correspondence.</p>
+                            <div class="space-y-1.5 text-xs text-slate-500 mb-6">
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-clock text-emerald-600"></i> Duration: 1 Month</div>
+                                <div class="flex items-center gap-2"><i class="fa-solid fa-bolt text-emerald-600"></i> Speed & Accuracy Training</div>
+                            </div>
+                        </div>
+                        <button onclick="openApplyModal('Arabic Typing')" class="w-full bg-slate-100 hover:bg-emerald-600 hover:text-white text-toptech-navy font-semibold py-2.5 rounded-xl transition-colors text-sm flex items-center justify-center gap-2">
+                            Enroll in Course <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SCHEDULE & TIMETABLE SECTION -->
+    <section id="schedule" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="inline-block bg-emerald-100 text-emerald-700 font-bold px-3 py-1 rounded-lg text-xs uppercase tracking-wider">
+                        Operating Hours
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-toptech-navy">
+                        Flexible Schedules from Monday to Saturday
+                    </h2>
+                    <p class="text-slate-600">
+                        At TopTech Computer College, we understand that students and professionals have busy routines. That is why we offer morning, afternoon, and evening batches to fit your schedule.
+                    </p>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="w-10 h-10 bg-emerald-500 text-white rounded-lg flex items-center justify-center flex-shrink-0 font-bold">
+                                01
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-toptech-navy">Morning Shift</h4>
+                                <p class="text-sm text-slate-600">8:30 AM – 11:30 AM (Mon to Sat)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="w-10 h-10 bg-toptech-blue text-white rounded-lg flex items-center justify-center flex-shrink-0 font-bold">
+                                02
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-toptech-navy">Afternoon Shift</h4>
+                                <p class="text-sm text-slate-600">2:00 PM – 4:30 PM (Mon to Sat)</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 bg-slate-50 rounded-xl border border-slate-100">
+                            <div class="w-10 h-10 bg-toptech-navy text-white rounded-lg flex items-center justify-center flex-shrink-0 font-bold">
+                                03
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-toptech-navy">Evening / Working Shift</h4>
+                                <p class="text-sm text-slate-600">4:30 PM – 6:30 PM (Mon to Sat)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Schedule Table Visual Card -->
+                <div class="lg:col-span-7 bg-toptech-navy rounded-3xl p-6 sm:p-8 text-white shadow-xl relative overflow-hidden">
+                    <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl"></div>
+                    
+                    <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-calendar-days text-emerald-400"></i> Weekly Training Overview
+                    </h3>
+
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center py-3 border-b border-slate-700/80 text-sm">
+                            <span class="font-semibold text-slate-200">Monday - Thursday</span>
+                            <span class="text-emerald-400 font-mono font-medium">Full Lab & Theory Classes</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-slate-700/80 text-sm">
+                            <span class="font-semibold text-slate-200">Friday</span>
+                            <span class="text-emerald-400 font-mono font-medium">Hands-On Practical Projects</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-slate-700/80 text-sm">
+                            <span class="font-semibold text-slate-200">Saturday</span>
+                            <span class="text-emerald-400 font-mono font-medium">Review, Typing & Speed Drills</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 text-sm">
+                            <span class="font-semibold text-slate-400">Sunday</span>
+                            <span class="text-slate-400 font-mono">Closed</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-4 bg-white/10 rounded-2xl border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
+                        <div class="text-xs text-slate-300">
+                            <i class="fa-solid fa-circle-info text-emerald-400 mr-1"></i> Custom timing available for special group intakes.
+                        </div>
+                        <button onclick="openApplyModal('General Course Inquiry')" class="bg-emerald-500 hover:bg-emerald-600 text-toptech-navy font-bold text-xs px-4 py-2.5 rounded-xl whitespace-nowrap transition-colors">
+                            Book Your Shift
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ENROLLMENT / REGISTRATION MODAL -->
+    <div id="applyModal" class="fixed inset-0 bg-slate-900/70 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative animate-fade-in border border-slate-100">
+            <button onclick="closeApplyModal()" class="absolute top-5 right-5 text-slate-400 hover:text-slate-700 text-xl w-8 h-8 flex items-center justify-center rounded-full hover:bg-slate-100 transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="mb-6">
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Admission Open</span>
+                <h3 class="text-2xl font-bold text-toptech-navy">Course Registration</h3>
+                <p class="text-slate-500 text-sm mt-1">Fill in your details below to enroll at TopTech Computer College.</p>
+            </div>
+
+            <form id="registrationForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Full Name *</label>
+                    <input type="text" id="studentName" required placeholder="e.g. Hassan Mohamed" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Phone Number *</label>
+                        <input type="tel" id="studentPhone" required placeholder="07XX XXX XXX" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Preferred Shift</label>
+                        <select id="studentShift" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm">
+                            <option value="Morning Shift">Morning (8:30 AM)</option>
+                            <option value="Afternoon Shift">Afternoon (2:00 PM)</option>
+                            <option value="Evening Shift">Evening (4:30 PM)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Selected Course *</label>
+                    <select id="courseSelect" required class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm">
+                        <option value="Computer Packages">Computer Packages</option>
+                        <option value="Web Development">Web Development</option>
+                        <option value="Software Engineering">Software Engineering</option>
+                        <option value="Graphic Design">Graphic Design</option>
+                        <option value="IT Support">IT Support & Hardware</option>
+                        <option value="Track Dispatch">Track Dispatch</option>
+                        <option value="Interpretation">Interpretation Lessons</option>
+                        <option value="Arabic Typing">Arabic Typing</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-1">Additional Message / Question</label>
+                    <textarea id="studentMessage" rows="3" placeholder="Any specific questions or start date preference..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-paper-plane"></i> Submit Registration
+                </button>
+            </form>
+
+            <div id="formSuccessMessage" class="hidden text-center py-6 space-y-4">
+                <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h4 class="text-xl font-bold text-toptech-navy">Registration Received!</h4>
+                <p class="text-slate-600 text-sm">Thank you for applying. Our admissions desk will contact you via telephone shortly.</p>
+                <button onclick="closeApplyModal()" class="bg-toptech-navy text-white px-6 py-2.5 rounded-xl font-semibold text-sm">Close Window</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-16 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-600 mb-2">Get In Touch</h2>
+                <p class="text-3xl sm:text-4xl font-extrabold text-toptech-navy">Contact & Visit Us</p>
+                <p class="text-slate-600 mt-2">Have questions about fees, intakes, or course syllabus? Reach out to us directly!</p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Contact Card 1: Phone -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-toptech-navy mb-1">Phone Numbers</h3>
+                    <p class="text-slate-500 text-xs mb-4">Call or text our administration desk</p>
+                    <div class="space-y-1 text-sm font-semibold text-slate-800">
+                        <a href="tel:0798090975" class="block hover:text-emerald-600 transition-colors">0798 090 975</a>
+                        <a href="tel:0118634000" class="block hover:text-emerald-600 transition-colors">0118 634 000</a>
+                    </div>
+                </div>
+
+                <!-- Contact Card 2: Email -->
+                <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center">
+                    <div class="w-14 h-14 bg-blue-100 text-toptech-navy rounded-2xl flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-toptech-navy mb-1">Email Address</h3>
+                    <p class="text-slate-500 text-xs mb-4">Send us your inquiries anytime</p>
+                    <a href="mailto:toptechcomputer961@gmail.com" class="text-sm font-semibold text-slate-800 hover:text-emerald-600 transition-colors break-all">
+                        toptechcomputer961@gmail.com
+                    </a>
+                </div>
+
+                <!-- Contact Card 3: Physical Location -->
+                 <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col items-center text-center">
+                    <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center text-2xl mb-4">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-toptech-navy mb-1">Campus Location</h3>
+                    <p class="text-slate-500 text-xs mb-4">Visit our computer lab in Garissa</p>
+                    <p class="text-sm font-semibold text-slate-800">
+                        Bulla Mzuri, Garissa, Kenya
+                    </p>
+                </div>
+            </div>
+
+            <!-- MAP / LOCATION VISUAL BANNER -->
+            <div class="mt-10 bg-white p-4 rounded-3xl border border-slate-200 shadow-sm">
+                <div class="w-full h-64 bg-slate-200 rounded-2xl flex flex-col items-center justify-center text-slate-500 relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-toptech-navy/80 flex flex-col items-center justify-center p-6 text-center text-white space-y-3">
+                        <div class="w-12 h-12 bg-emerald-500 rounded-full flex items-center justify-center text-xl text-toptech-navy font-bold">
+                            <i class="fa-solid fa-map-pin"></i>
+                        </div>
+                        <h4 class="text-xl font-bold">TopTech Computer College Campus</h4>
+                        <p class="text-xs text-slate-300 max-w-md">Located conveniently at Bulla Mzuri, Garissa Town. Easily accessible for daily morning, afternoon, and evening classes.</p>
+                        <a href="https://maps.google.com/?q=Garissa+Kenya" target="_blank" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-toptech-navy font-bold px-5 py-2.5 rounded-xl text-xs transition-colors">
+                            <i class="fa-solid fa-location-arrow"></i> Open Directions in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer class="bg-toptech-navy text-white pt-12 pb-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 pb-10 border-b border-slate-800">
+                
+                <!-- Col 1: About -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-white rounded-full p-1">
+                            <svg viewBox="0 0 200 200" class="w-full h-full">
+                                <circle cx="100" cy="100" r="90" fill="#0b2853"/>
+                                <polygon points="100,50 140,65 100,80 60,65" fill="#ffffff"/>
+                                <path d="M70 145 Q 110 110 150 50" fill="none" stroke="#00A86B" stroke-width="12"/>
+                            </svg>
+                        </div>
+                        <span class="font-extrabold text-lg">TOPTECH</span>
+                    </div>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        TopTech Computer College is a dedicated IT training institution situated in Bulla Mzuri, Garissa. Slogan: Empowering minds through technology.
+                    </p>
+                </div>
+
+                <!-- Col 2: Quick Links -->
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-emerald-400 mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li><a href="#home" class="hover:text-emerald-400 transition-colors">Home Page</a></li>
+                        <li><a href="#about" class="hover:text-emerald-400 transition-colors">About TopTech</a></li>
+                        <li><a href="#courses" class="hover:text-emerald-400 transition-colors">View All Courses</a></li>
+                        <li><a href="#schedule" class="hover:text-emerald-400 transition-colors">Class Timetable</a></li>
+                        <li><a href="#contact" class="hover:text-emerald-400 transition-colors">Contact Information</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Offered Programs -->
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-emerald-400 mb-4">Popular Programs</h4>
+                    <ul class="space-y-2 text-xs text-slate-300">
+                        <li><a href="#courses" class="hover:text-emerald-400 transition-colors">Computer Packages</a></li>
+                        <li><a href="#courses" class="hover:text-emerald-400 transition-colors">Web Development</a></li>
+                        <li><a href="#courses" class="hover:text-emerald-400 transition-colors">Software Engineering</a></li>
+                        <li><a href="#courses" class="hover:text-emerald-400 transition-colors">Graphic Design</a></li>
+                        <li><a href="#courses" class="hover:text-emerald-400 transition-colors">Track Dispatch & Arabic Typing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Contact Summary -->
+                <div class="space-y-3">
+                    <h4 class="text-sm font-bold uppercase tracking-wider text-emerald-400 mb-4">Contact Info</h4>
+                    <p class="text-xs text-slate-300 flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot text-emerald-400"></i> Garissa, Kenya (Bulla Mzuri)
+                    </p>
+                    <p class="text-xs text-slate-300 flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-emerald-400"></i> 0798090975 / 0118634000
+                    </p>
+                    <p class="text-xs text-slate-300 flex items-center gap-2 break-all">
+                        <i class="fa-solid fa-envelope text-emerald-400"></i> toptechcomputer961@gmail.com
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- COPYRIGHT -->
+            <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+                <p>© 2026 TopTech Computer College. All Rights Reserved.</p>
+                <p>Garissa, Kenya • Empowering Minds Through Technology</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP CHAT BUTTON -->
+    <a href="https://wa.me/254798090975?text=Hello%20TopTech%20Computer%20College,%20I%20would%20like%20to%20inquire%20about%20your%20courses." target="_blank" aria-label="Chat on WhatsApp" class="fixed bottom-6 right-6 bg-emerald-500 hover:bg-emerald-600 text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center text-2xl z-40 transition-all transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Toggle Mobile Navigation Menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.className = 'fa-solid fa-bars text-2xl';
+            } else {
+                icon.className = 'fa-solid fa-xmark text-2xl';
+            }
+        }
+
+        // Filter Courses Function
+        function filterCourses(category) {
+            const cards = document.querySelectorAll('.course-card');
+            const buttons = document.querySelectorAll('.course-filter-btn');
+
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.className = 'course-filter-btn active bg-toptech-navy text-white px-4 py-2 rounded-xl text-sm font-semibold shadow transition-all';
+                } else {
+                    btn.className = 'course-filter-btn bg-white text-slate-700 hover:bg-slate-200 px-4 py-2 rounded-xl text-sm font-semibold transition-all';
+                }
+            });
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Open Enrollment Modal
+        function openApplyModal(courseName) {
+            const modal = document.getElementById('applyModal');
+            const select = document.getElementById('courseSelect');
+            const form = document.getElementById('registrationForm');
+            const success = document.getElementById('formSuccessMessage');
+
+            form.classList.remove('hidden');
+            success.classList.add('hidden');
+
+            if (courseName && select) {
+                for (let option of select.options) {
+                    if (option.value === courseName) {
+                        option.selected = true;
+                        break;
+                    }
+                }
+            }
+            modal.classList.remove('hidden');
+        }
+
+        // Close Modal
+        function closeApplyModal() {
+            document.getElementById('applyModal').classList.add('hidden');
+        }
+
+        // Handle Form Submission
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const form = document.getElementById('registrationForm');
+            const success = document.getElementById('formSuccessMessage');
+
+            // Show interactive success state
+            form.classList.add('hidden');
+            success.classList.remove('hidden');
+        }
+
+        // Close Modal on outer click
+        window.onclick = function(event) {
+            const modal = document.getElementById('applyModal');
+            if (event.target === modal) {
+                closeApplyModal();
+            }
+        };
+    </script>
+</body>
+</html>
